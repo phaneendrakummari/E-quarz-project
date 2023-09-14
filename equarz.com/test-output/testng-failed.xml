@@ -5,9 +5,13 @@
     <classes>
       <class name="com.etestcases.Producttest">
         <methods>
+          <include name="teardown"/>
           <include name="verifyproduct"/>
           <include name="prdinitialze"/>
           <include name="seaproduct"/>
+          <include name="dealofproduct"/>
+          <include name="producthome"/>
+          <include name="bannerproduct"/>
         </methods>
       </class> <!-- com.etestcases.Producttest -->
     </classes>

@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Testbase {
 	
 	public FileInputStream file;
-	public static Properties props;
+	public  Properties props;
 	public static WebDriver driver;
 	
 	public Testbase() {

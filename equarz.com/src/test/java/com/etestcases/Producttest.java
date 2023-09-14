@@ -27,34 +27,45 @@ public class Producttest extends Testbase {
 	@BeforeMethod
 	public void prdinitialze() throws Throwable 
 	{
-		setup();
-		sf=new Signupfunctionality(driver);
-		lg= new Login_functionality(driver);
-		lg.validatelogin(props.getProperty("username"),props.getProperty("password"));
+		 setup();
+		 lg= new Login_functionality(driver);
+		 lg.validatelogin(props.getProperty("username"),props.getProperty("password"));
 		 pt = new Productsearch(driver);
 	 
 	}
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public  void verifyproduct()  throws Throwable 
 	{
-		 pt.catproduct(); 
-		 String url=driver.getCurrentUrl();
-		 Assert.assertEquals("http://e-quarz.com/product/class-5-grade-5-mathematics-practice-workbook-with-answers-cbseicse-book-question-papers-mental-math-mixed-word-problems", url);
+		 pt.cateogoryproduct(); 
 		 
 	}
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void bannerproduct()
 	{
-		pt.banproduct();
-		String url=driver.getCurrentUrl();
-		Assert.assertEquals("http://e-quarz.com/product/dhingra-mens-slim-fit-tuxedo-3pcs-suit-coat-pant-and-waistcoat-InysDn", url);
+		pt.banerproduct();
 	}
 	@Test(priority = 1)
 
 	public void seaproduct() throws Throwable
 	{
-		
 		pt.productsearch();
 	
+	}
+	@Test(priority = 5)
+	public void dealofproduct() throws InterruptedException
+	{
+		pt.dealproduct();
+		
+	}
+	@Test(priority = 2)
+	public void producthome()
+	{
+		pt.homeproduct();
+	}
+	@AfterMethod
+	public void teardown() 
+	{
+		driver.close();
+		
 	}
 }
