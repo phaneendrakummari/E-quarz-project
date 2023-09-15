@@ -15,7 +15,7 @@ public class Producttest extends Testbase {
 	
 	Productsearch pt;
 	Login_functionality lg;
-	Signupfunctionality sf;
+	//Signupfunctionality sf;
 	//WebDriver driver;
 	 
 	public Producttest() 
@@ -48,6 +48,7 @@ public class Producttest extends Testbase {
 
 	public void seaproduct() throws Throwable
 	{
+		
 		pt.productsearch();
 	
 	}
@@ -68,4 +69,5 @@ public class Producttest extends Testbase {
 		driver.close();
 		
 	}
+	
 }
