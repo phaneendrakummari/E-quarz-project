@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.etestcases.WishlistTest">
+      <class name="com.etestcases.Homelinktest">
         <methods>
-          <include name="searchwishlist"/>
           <include name="initialize"/>
+          <include name="featurproduct"/>
         </methods>
-      </class> <!-- com.etestcases.WishlistTest -->
+      </class> <!-- com.etestcases.Homelinktest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

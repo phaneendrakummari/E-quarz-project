@@ -29,7 +29,8 @@ public class Logintest extends Testbase {
 	  
 	}
 	@Test(dataProvider = "setdata", dataProviderClass = Utilsfile.class)
-	public void verifylogin(String username, String password) throws Throwable {
+	public void verifylogin(String username, String password) throws Throwable 
+	{
 		
 		lg.validatelogin(username,password);
 		

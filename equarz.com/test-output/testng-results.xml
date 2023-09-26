@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-15T13:04:55 IST" name="Default suite" finished-at="2023-09-15T13:05:30 IST" duration-ms="34812">
+  <suite started-at="2023-09-26T11:52:54 IST" name="Default suite" finished-at="2023-09-26T11:53:18 IST" duration-ms="24046">
     <groups>
     </groups>
-    <test started-at="2023-09-15T13:04:55 IST" name="Default test" finished-at="2023-09-15T13:05:30 IST" duration-ms="34812">
-      <class name="com.etestcases.WishlistTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:com.etestcases.WishlistTest@55182842]" started-at="2023-09-15T13:04:55 IST" name="initialize" finished-at="2023-09-15T13:05:30 IST" duration-ms="34748" status="PASS">
+    <test started-at="2023-09-26T11:52:54 IST" name="Default test" finished-at="2023-09-26T11:53:18 IST" duration-ms="24046">
+      <class name="com.etestcases.Homelinktest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:com.etestcases.Homelinktest@47eaca72]" started-at="2023-09-26T11:52:54 IST" name="initialize" finished-at="2023-09-26T11:53:12 IST" duration-ms="18204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="footerwishlist()[pri:0, instance:com.etestcases.WishlistTest@55182842]" started-at="2023-09-15T13:05:30 IST" name="footerwishlist" finished-at="2023-09-15T13:05:30 IST" duration-ms="22" status="PASS">
+        <test-method signature="bestselling()[pri:0, instance:com.etestcases.Homelinktest@47eaca72]" started-at="2023-09-26T11:53:12 IST" name="bestselling" finished-at="2023-09-26T11:53:18 IST" duration-ms="5798" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- footerwishlist -->
-      </class> <!-- com.etestcases.WishlistTest -->
+        </test-method> <!-- bestselling -->
+      </class> <!-- com.etestcases.Homelinktest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

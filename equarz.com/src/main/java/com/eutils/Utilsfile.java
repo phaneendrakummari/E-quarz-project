@@ -1,6 +1,8 @@
 package com.eutils;
 
 import com.ebase.Testbase;
+import com.epageobjects.Homepage;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -39,9 +41,12 @@ public class Utilsfile extends Testbase {
 		return data;
 	}
 
-//	public static void dropdown(WebElement value, String text) {
-//		Select sel = new Select(value);
-//		sel.selectByValue(text);
+	public static Homepage  dropdown(WebElement value, String text)
+	{		
+		Select sel = new Select(value);
+	    sel.selectByValue(text);
+	    return new Homepage();
+	}
 
 	}
 
