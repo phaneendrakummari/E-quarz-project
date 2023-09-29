@@ -23,7 +23,7 @@ public class Utilsfile extends Testbase {
 
 	public Object[][] setdata() throws Throwable {
 
-		File file = new File("./src/main/java/com/etestdata/sigup.xlsx");
+		File file = new File("./src/main/java/com/etestdata/address.xlsx");
 		FileInputStream stream = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(stream);
 		XSSFSheet sheet = workbook.getSheetAt(0);

@@ -26,13 +26,13 @@ public class Search_Functionality  extends Testbase{
 		search.sendKeys("pendrive");
 		search.sendKeys(Keys.ENTER);
 	}
-	public void searchdropdown() {
-		String optiontoselect="Mouse Hp";
-		
-		search.sendKeys("mous");
-		List<WebElement> optionlist;
+//	public void searchdropdown() {
+//		String optiontoselect="Mouse Hp";
+//		
+//		search.sendKeys("mous");
+//		List<WebElement> optionlist;
 				
 	}
 	
 
-}
+
