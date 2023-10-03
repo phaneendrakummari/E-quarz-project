@@ -1,5 +1,7 @@
 package com.etestcases;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -43,6 +45,14 @@ public class WishlistTest extends Testbase {
 	public void homewishlist()
 	{
 		wl.homelist();
+	}  
+	@Test
+	public void removewlist()
+	{
+	
+		wl.removelist();
+//		String message = textmsg.getText();
+//		assertEquals("Product has been remove from wishlist!",message);
 	}
 	
 

@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-15T13:04:55 IST" name="Default suite" finished-at="2023-09-15T13:05:30 IST" duration-ms="34812">
+  <suite started-at="2023-09-29T17:07:48 IST" name="Default suite" finished-at="2023-09-29T17:08:27 IST" duration-ms="39085">
     <groups>
     </groups>
-    <test started-at="2023-09-15T13:04:55 IST" name="Default test" finished-at="2023-09-15T13:05:30 IST" duration-ms="34812">
-      <class name="com.etestcases.WishlistTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:com.etestcases.WishlistTest@55182842]" started-at="2023-09-15T13:04:55 IST" name="initialize" finished-at="2023-09-15T13:05:30 IST" duration-ms="34748" status="PASS">
+    <test started-at="2023-09-29T17:07:48 IST" name="Default test" finished-at="2023-09-29T17:08:27 IST" duration-ms="39085">
+      <class name="com.etestcases.Addresstest">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.etestcases.Addresstest@776aec5c]" started-at="2023-09-29T17:07:48 IST" name="login" finished-at="2023-09-29T17:08:18 IST" duration-ms="30035" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="footerwishlist()[pri:0, instance:com.etestcases.WishlistTest@55182842]" started-at="2023-09-15T13:05:30 IST" name="footerwishlist" finished-at="2023-09-15T13:05:30 IST" duration-ms="22" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="EditAddress()[pri:0, instance:com.etestcases.Addresstest@776aec5c]" started-at="2023-09-29T17:08:18 IST" name="EditAddress" finished-at="2023-09-29T17:08:27 IST" duration-ms="9015" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- footerwishlist -->
-      </class> <!-- com.etestcases.WishlistTest -->
+        </test-method> <!-- EditAddress -->
+      </class> <!-- com.etestcases.Addresstest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
