@@ -153,7 +153,8 @@ public class Homelinks extends Testbase
 		String url = driver.getCurrentUrl();
 	    assertEquals("http://e-quarz.com/account-tickets", url);
 	}
-	public void Company() {
+	public void Company() 
+	{
 		org.openqa.selenium.Point ps = scroll.getLocation();
         JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy"+ps);

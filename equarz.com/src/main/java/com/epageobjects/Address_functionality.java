@@ -96,7 +96,8 @@ public class Address_functionality  extends Testbase{
 		Alert ale = driver.switchTo().alert();
 		ale.accept();
 	}
-	public void editaddress() {
+	public void editaddress() 
+	{
 		Actions act = new Actions(driver);
 		act.moveToElement(profile).build().perform();
 		myorder.click();

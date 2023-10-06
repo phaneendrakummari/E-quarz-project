@@ -90,7 +90,8 @@ public class Wishlist extends Testbase {
   	  homeproduct.click();
   	  wishlist.click();
 	}
-	public void removelist() {
+	public void removelist() 
+	{
 		wishlistremove.click();
 		cancelbutton.click();
 		String message = textmsg.getText();

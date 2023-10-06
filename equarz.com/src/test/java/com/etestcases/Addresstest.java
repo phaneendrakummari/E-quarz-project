@@ -17,7 +17,8 @@ public class Addresstest extends Testbase{
 		super();
 	}
 	@BeforeClass
-	public void login() throws Throwable {
+	public void login() throws Throwable 
+	{
 		setup();
   	  lg=new Login_functionality(driver);
   	  lg.validatelogin(props.getProperty("username"),props.getProperty("password"));

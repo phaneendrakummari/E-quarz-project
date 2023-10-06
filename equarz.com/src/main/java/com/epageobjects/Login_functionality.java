@@ -25,16 +25,25 @@ public class Login_functionality extends Testbase {
 		
 		PageFactory.initElements(driver,this);
 	}
-	public Homepage validatelogin(String user1 , String password1) throws Throwable {
+	public Homepage validatelogin(String user1,String password1) throws Throwable {
 		
 		user.sendKeys(user1);
 		pass.sendKeys(password1);
 		Thread.sleep(10000);
 //		captchavalue.click();
 		signinbtn.click();
-//		user.sendKeys(props.getProperty("username"));
-//		pass.sendKeys(props.getProperty("password"));
+		//user.sendKeys(props.getProperty("username"));
+		//pass.sendKeys(props.getProperty("password"));
 		return new Homepage ();
+	}
+	public void myprofilepic() throws Throwable
+	{
+		user.sendKeys("phaneendra9.marolix@gmail.com");
+		pass.sendKeys("phanee@9");
+		Thread.sleep(10000);
+		signinbtn.click();
+
+
 	}
 	
 	

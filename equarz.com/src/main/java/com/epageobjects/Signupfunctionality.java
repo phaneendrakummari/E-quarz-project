@@ -38,7 +38,7 @@ public class Signupfunctionality extends Testbase{
 	      PageFactory.initElements(driver, this);	
 	}
 	
-	public Homepage verifysignup(String frst ,String last, String email, String phone, String pass, String copass ) throws Throwable {
+	public Homepage verifysignup(String frst ,String last, String email, String phone, String pass, String copass) throws Throwable {
 		
 		firstname.sendKeys(frst);
 		lastname.sendKeys(last);
@@ -48,7 +48,7 @@ public class Signupfunctionality extends Testbase{
 		confrimpassword.sendKeys(copass);
 		checkbox.click();
 		Thread.sleep(10000);
-		//signbtn.sendKeys(signbutton);
+		signbtn.click();
 		
 		return new Homepage();
 		
