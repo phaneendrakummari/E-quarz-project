@@ -17,20 +17,18 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 
 public class Utilsfile extends Testbase {
-   
-	
-	@DataProvider
+   private static final String filepath="./src/main/java/com/etestdata/sigup.xlsx";
 
-	public Object[][] setdata() throws Throwable {
+	public  static String[][] readdata(String sheetname) throws Throwable {
 
 		File file = new File("./src/main/java/com/etestdata/sigup.xlsx");
 		FileInputStream stream = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(stream);
-		XSSFSheet sheet = workbook.getSheetAt(0);
+		XSSFSheet sheet = workbook.getSheet(sheetname);
 
 		int rows = sheet.getPhysicalNumberOfRows();
 		int columns = sheet.getRow(1).getLastCellNum();
-		Object[][] data = new Object[rows - 1][columns];
+		String[][] data = new String[rows - 1][columns];
 
 		for (int i = 0; i < rows - 1; i++) {
 			for (int j = 0; j < columns; j++) {

@@ -1,5 +1,7 @@
 package com.epageobjects;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +21,7 @@ public class Address_functionality  extends Testbase{
 	WebElement address;
 	@FindBy(id="add_new_address")
 	WebElement addnewaddress;
-	@FindBy(id="name")
+	@FindBy(xpath="//input[@id='name']")
 	WebElement personname;
 	@FindBy(id="phone")
 	WebElement phone;
@@ -81,6 +83,8 @@ public class Address_functionality  extends Testbase{
 		india.click();
 		Homeaddress.sendKeys(addresses);
 		addinformation.click();
+		String url = driver.getCurrentUrl();
+		assertEquals(url, "http://e-quarz.com/account-address");
 		
 		//return new Homepage();
 		

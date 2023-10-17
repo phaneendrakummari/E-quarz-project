@@ -27,6 +27,11 @@ public class Myprofiletest extends Testbase{
 	{
 		mp.Profilefun();
 	}
+	@Test
+	public void editprofilepic() throws Throwable 
+	{
+		mp.editpic();
+	}
 	
 
 }
