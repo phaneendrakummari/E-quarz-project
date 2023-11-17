@@ -1,5 +1,7 @@
 package com.epageobjects;
 
+import static org.testng.Assert.assertEquals;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -14,9 +16,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ebase.Testbase;
 
-public class Myprofile extends Testbase{
-	
-	
+public class Myprofile extends Testbase
+{
+
 	@FindBy(xpath="//div[@class='navbar-tool-icon-box bg-secondary']")
 	WebElement profile;
 	@FindBy(xpath="//a[text()=' My profile']")
@@ -29,6 +31,10 @@ public class Myprofile extends Testbase{
 	WebElement lastname;
 	@FindBy(id="phone")
 	WebElement phonenum;
+	@FindBy(xpath="//button[text()='Update   ']")
+	WebElement update;
+	@FindBy(xpath="//div[text()='Updated successfully']")
+	WebElement updatedsuccess;
 	
 	public Myprofile(WebDriver driver) 
 	{
@@ -36,6 +42,7 @@ public class Myprofile extends Testbase{
 	}
 	public void Profilefun() throws Exception 
 	{
+
 		Actions act = new Actions(driver);
 		act.moveToElement(profile).build().perform();
 		myprofile.click();
@@ -52,10 +59,36 @@ public class Myprofile extends Testbase{
 		rb.keyRelease(KeyEvent.VK_ENTER);
 		firstname.clear();
 		firstname.sendKeys("KUMMARI");
-		 lastname.clear();
-		 lastname.sendKeys("Phaneendra");
-		 phonenum.clear();
-		 phonenum.sendKeys("9550230737");
+		lastname.clear();
+		lastname.sendKeys("Phaneendra");
+		phonenum.clear();
+		phonenum.sendKeys("9550230737");
+		update.click();
+		String printtext = updatedsuccess.getText();
+		assertEquals("Updated successfully", printtext);
+
+	}
+	public void editpic() throws Exception {
+		
+		Actions act = new Actions(driver);
+		act.moveToElement(profile).build().perform();
+		myprofile.click();
+		changeprofile.click();
+		Robot rb = new Robot();
+		rb.delay(5000);
+		StringSelection ss= new StringSelection("\"C:\\Users\\Dell\\Downloads\\marolix 2.jfif\"");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
+		rb.keyPress(KeyEvent.VK_CONTROL);
+		rb.keyPress(KeyEvent.VK_V);
+		rb.keyRelease(KeyEvent.VK_CONTROL);
+		rb.keyRelease(KeyEvent.VK_V);
+		rb.delay(2000);
+		rb.keyPress(KeyEvent.VK_ENTER);
+		rb.keyRelease(KeyEvent.VK_ENTER);
+		rb.delay(2000);
+		update.click();
+		String pic= updatedsuccess.getText();
+		assertEquals("Updated successfully", pic);
 
 	}
 

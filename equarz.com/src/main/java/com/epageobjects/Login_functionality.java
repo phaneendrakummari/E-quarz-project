@@ -36,6 +36,7 @@ public class Login_functionality extends Testbase {
 		//pass.sendKeys(props.getProperty("password"));
 		return new Homepage ();
 	}
+	
 	public void myprofilepic() throws Throwable
 	{
 		user.sendKeys("phaneendra9.marolix@gmail.com");

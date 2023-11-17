@@ -21,13 +21,12 @@ public class Buynowtest extends Testbase{
 	}
 
 	@BeforeMethod
-	public void intialize() throws Throwable {
-		
+	public void intialize() throws Throwable
+	{
 		setup();
 		lg=new Login_functionality(driver);
 		lg.validatelogin(props.getProperty("username"),props.getProperty("password"));
-	    bn = new BuyNow(driver);
-	     
+	    bn = new BuyNow(driver);   
 	}
 	@Test
 	public void categorybuynow() 
