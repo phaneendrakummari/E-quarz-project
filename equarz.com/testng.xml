@@ -8,9 +8,17 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
+      
       <class name="com.etestcases.Myprofiletest"/>
+      <class name="com.etestcases.Homelinktest"/>
       <class name="com.etestcases.Addresstest"/>
+      
+     
+      
+      
+      
       
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+      

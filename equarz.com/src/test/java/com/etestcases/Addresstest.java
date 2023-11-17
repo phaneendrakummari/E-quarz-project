@@ -1,5 +1,6 @@
 package com.etestcases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -48,5 +49,10 @@ public class Addresstest extends Testbase{
     public void EditAddress()
     {
     	af.editaddress();
+    }
+    @AfterMethod
+    public void teardown()
+    {
+    	driver.quit();
     }
 }

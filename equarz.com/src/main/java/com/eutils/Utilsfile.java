@@ -6,12 +6,16 @@ import com.epageobjects.Homepage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
@@ -44,6 +48,12 @@ public class Utilsfile extends Testbase {
 		Select sel = new Select(value);
 	    sel.selectByValue(text);
 	    return new Homepage();
+	}
+	public static void takescreenshotatendoftest() throws IOException {
+		File scrfile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String currentDir = System.getProperty("user.dir");
+		FileUtils.copyFile(scrfile, new File(currentDir + "/Screenshot/" + System.currentTimeMillis()+  ".png" ));
+		
 	}
 
 	}
