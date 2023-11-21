@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -53,6 +54,19 @@ public class Utilsfile extends Testbase {
 		File scrfile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
 		FileUtils.copyFile(scrfile, new File(currentDir + "/Screenshot/" + System.currentTimeMillis()+  ".png" ));
+		
+	}
+	public Homepage windowhandles(String window) {
+		
+		Set<String> handles = driver.getWindowHandles();
+		for(String hand : handles)
+		{
+			if(!window.equals(handles)) {
+				driver.switchTo().window(hand);
+				driver.manage().window().maximize();
+			}
+		}
+		return null;
 		
 	}
 
